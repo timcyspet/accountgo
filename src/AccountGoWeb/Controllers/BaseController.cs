@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Net.Http;
 
 namespace AccountGoWeb.Controllers
@@ -68,7 +69,8 @@ namespace AccountGoWeb.Controllers
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("UserName", GetCurrentUserName());
-
+                client.Timeout = TimeSpan.FromSeconds(1000);
+                client.MaxResponseContentBufferSize = 1556354;
                 var response = client.PostAsync(baseUri + uri, data);
                 return response.Result;
             }

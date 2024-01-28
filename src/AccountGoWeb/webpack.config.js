@@ -18,6 +18,9 @@ if (mode === 'undefined' || mode == null || mode === '') {
     mode = "development";
 }
 
+console.log("NODE_ENV (webpack.config.js) => " + apiUrl);
+console.log("APIURLSPA (webpack.config.js) => " + apiUrl);
+
 var config = {
     entry: {
         index: scriptsDir + '/Home' + '/Index',

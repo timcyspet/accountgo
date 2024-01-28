@@ -41,7 +41,7 @@ namespace AccountGoWeb.Controllers
                 HttpResponseMessage responseSignIn = Post("account/signin", content);
                 Newtonsoft.Json.Linq.JObject resultSignIn = Newtonsoft.Json.Linq.JObject.Parse(responseSignIn.Content.ReadAsStringAsync().Result);
 
-                if (resultSignIn["result"] != null)
+                if (resultSignIn.HasValues)
                 {
                     var user = await GetAsync<Dto.Security.User>("administration/getuser?username=" + model.Email);
 

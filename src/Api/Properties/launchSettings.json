@@ -1,12 +1,4 @@
-﻿{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:8001/",
-      "sslPort": 0
-    }
-  },
+{
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
@@ -22,9 +14,32 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DBSERVER": "localhost",
         "DBUSERID": "sa",
-        "DBPASSWORD": "Str0ngPassword"
+        "DBPASSWORD": "P@ssword01"
       },
-      "applicationUrl": "http://localhost:8001/"
+      "applicationUrl": "http://localhost:8001/",
+      "nativeDebugging": true,
+      "sqlDebugging": true
+    },
+    "Profile 1": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DBSERVER": "localhost",
+        "DBUSERID": "sa",
+        "DBPASSWORD": "P@ssword01"
+      },
+      "applicationUrl": "http://localhost:8001/",
+      "nativeDebugging": true,
+      "sqlDebugging": true
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:8001/",
+      "sslPort": 0
     }
   }
 }

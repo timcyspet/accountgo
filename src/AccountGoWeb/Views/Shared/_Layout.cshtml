@@ -276,20 +276,20 @@
                             @if (User.IsInRole("SystemAdministrators"))
                             {
                                 <li>
-                                    <a href="#">
+                                    <a class="nav-link" href="#">
                                         Security
                                         <span class="pull-right-container">
                                             <i class="fa fa-angle-left pull-right"></i>
                                         </span>
                                     </a>
                                     <ul class="treeview-menu menu-open" style="display: block;">
-                                        <li><a href="~/administration/users">Users</a></li>
-                                        <li><a href="~/administration/roles">Roles</a></li>
-                                        <li><a href="~/administration/groups">Groups</a></li>
+                                        <li><a class="nav-link" href="~/administration/users">Users</a></li>
+                                        <li><a class="nav-link" href="~/administration/roles">Roles</a></li>
+                                        <li><a class="nav-link" href="~/administration/groups">Groups</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="~/administration/auditlogs">Audit Logs</a>
+                                    <a class="nav-link" href="~/administration/auditlogs">Audit Logs</a>
                                 </li>
                             }
                         </ul>

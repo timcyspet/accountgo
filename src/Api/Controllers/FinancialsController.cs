@@ -52,6 +52,7 @@ namespace Api.Controllers
             return new ObjectResult(accountTree);
         }
 
+        [HttpGet]
         [Route("[action]")]
         public IActionResult Account(int id)
         {

@@ -140,7 +140,7 @@ namespace Api.Data
             Console.WriteLine("Checking if there is already a default company.");
             var defaultCompany = _adminService.GetDefaultCompany();
             Console.WriteLine(defaultCompany == null ? "There is none." : "There is one.");
-            if (defaultCompany != null)
+            if (defaultCompany == null)
             {
                 defaultCompany = new Core.Domain.Company
                 {
